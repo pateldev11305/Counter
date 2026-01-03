@@ -1,45 +1,55 @@
-body{
-    font-family:Arial, Helvetica, sans-serif; 
-    font-size:16px;
-    color:#333333;
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 16px;
+    color: #333333;
+
     background-image: url("bg.jpeg");
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height:100vh;
-    margin:0;
+    
+    margin: 0;
+    min-height: 100vh;
+
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
 }
-#countLabel{
-    display:block;
-    text-align:center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:10em;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+#countLabel {
+    display: block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(3rem, 10vw, 10rem); 
+    margin: 10px 0;
 }
-#btnContainer{
-    text-align:center;
-    margin-top:20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+#btnContainer {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;  
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
 }
-.button{
-    font-size:2em;
-    margin:5px;
-    padding:20px 20px;
-    color:rgb(50, 50, 9);
-    background-color:rgb(14, 189, 229);
+
+.button {
+    font-size: clamp(1rem, 4vw, 2rem); 
+    padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 25px); 
+    color: rgb(50, 50, 9);
+    background-color: rgb(14, 189, 229);
     border-radius: 15px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    cursor:pointer;
+    border: 2px solid black;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    flex: 1 1 auto;  
+    min-width: 100px; 
 }
-.button:hover{
-    background-color:rgb(113, 238, 255);
+
+.button:hover {
+    background-color: rgb(113, 238, 255);
 }
